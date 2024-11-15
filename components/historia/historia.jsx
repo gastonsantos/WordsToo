@@ -111,18 +111,14 @@ export default function Historia() {
         try {
             const response = await sendHistoryToIa(data);
             if (response && response.data) {
-
-
                 setStoryText(response.data);
-
-
             }
         } catch (error) {
             console.log("Error", error);
         }
     };
     const handleReescribir = async () => {
-        // Limpiar el contenido de `storyText` antes de la llamada a la API
+        
         setStoryText("");
         SumarContador();
 
@@ -138,7 +134,6 @@ export default function Historia() {
             const response = await mejoraHistoria(data);
             if (response && response.data) {
                 console.log("Historia", response.data);
-                // Guardar solo la respuesta de la API en `storyText`
                 setStoryText(response.data);
             }
         } catch (error) {

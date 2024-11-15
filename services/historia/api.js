@@ -5,7 +5,6 @@ import html2canvas from "html2canvas";
 
 async function sendHistoryToIa(data){
     try {
-      // Usa el id como un parámetro de consulta en la URL
       const response = await axios.post(API+"/api/cohere/continuarHistoria", data);
       
       if (response.data != null) {
@@ -14,22 +13,20 @@ async function sendHistoryToIa(data){
           return response;
       }
   } catch (error) {
-      throw error; // Re-lanzar el error para manejarlo en el componente que llama
+      throw error; 
   }
   }
 
   async function mejoraHistoria(data){
     try {
-      // Usa el id como un parámetro de consulta en la URL
       const response = await axios.post(API+"/api/cohere/mejorarHistoria", data);
-      
       if (response.data != null) {
         console.log(response);
         localStorage.setItem("contenido",response.data)
           return response;
       }
   } catch (error) {
-      throw error; // Re-lanzar el error para manejarlo en el componente que llama
+      throw error; 
   }
   }
   async function empezarHistoria() {
