@@ -1,0 +1,438 @@
+.center {
+    height: 100%;
+    width: 100%;
+    margin: 2rem 0;
+    display: grid;
+    grid-template-rows: 2rem 3rem 2rem 2rem;
+    justify-self: center;
+  }
+  .dog2 {
+    display: grid;
+    justify-self: center;
+    transform: translate(0, -50%);
+  }
+  .dog2 .ears2 {
+    height: 0;
+    width: 0;
+    position: relative;
+    left: 30px;
+    border-bottom: 27px solid #498505;
+    border-left: 23px solid transparent;
+    border-right: 10px solid transparent;
+  }
+  .dog2 .ears2::before {
+    display: block;
+    content: "";
+    height: 0;
+    width: 0;
+    position: relative;
+    left: 33px;
+    border-bottom: 27px solid #498505;
+    border-left: 10px solid transparent;
+    border-right: 23px solid transparent;
+  }
+  .dog2 .head2 {
+    height: 74px;
+    width: 140px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 8px 0 0 #223d04;
+    border-radius: 35px;
+    background: #498505;
+  }
+  .dog2 .head2 .eyes2 {
+    height: 12px;
+    width: 12px;
+    position: relative;
+    top: 37px;
+    left: 50px;
+    border-radius: 100%;
+    animation: 9s dogRead infinite;
+    background: rgb(230, 6, 6);
+  }
+  .dog2 .head2 .eyes2::before {
+    display: block;
+    content: "";
+    height: 12px;
+    width: 12px;
+    position: relative;
+    left: 18px;
+    border-radius: 100%;
+    background: rgb(214, 9, 9);
+  }
+  .dog2 .head2 .nose2 {
+    height: 30px;
+    width: 48px;
+    position: relative;
+    top: 40px;
+    left: 37px;
+    border-radius: 20px;
+    background: #FBF1D8;
+  }
+  .dog2 .head2 .nose2::before {
+    display: block;
+    content: "";
+    height: 0;
+    width: 0;
+    position: relative;
+    top: 3px;
+    left: 9px;
+    border-radius: 15px;
+    border-top: 12px solid black;
+    border-left: 12px solid transparent;
+    border-right: 10px solid transparent;
+  }
+  .dog2 .body2 {
+    height: 110px;
+    width: 200px;
+    position: relative;
+    top: -30px;
+    z-index: 1;
+    border-radius: 55px;
+    background: #498505;
+  }
+  .dog2 .body2 .left-paw2 {
+    height: 25px;
+    width: 37px;
+    position: relative;
+    top: 70px;
+    left: 15px;
+    border-radius: 12px;
+    animation: 9s dogLeftType infinite;
+    background: #FBF1D8;
+  }
+  .dog2 .body2 .right-paw2 {
+    height: 25px;
+    width: 37px;
+    position: relative;
+    top: 45px;
+    left: 60px;
+    border-radius: 12px;
+    animation: 9s dogRightType infinite;
+    background: #FBF1D8;
+  }
+  .dog2 .tail2 {
+    height: 34px;
+    width: 70px;
+    position: relative;
+    top: -64px;
+    left: 150px;
+    z-index: 0;
+    border-radius: 0 17px 17px 0;
+    background: #223d04;
+  }
+  .dog2 .ORlaptop {
+    position: relative;
+    top: -161px;
+    left: -103px;
+    z-index: 2;
+  }
+  .dog2 .ORlaptop .ORscreen {
+    height: 85px;
+    width: 130px;
+    border-radius: 8px;
+    transform: skew(18deg);
+    background: #FFCA95;
+  }
+  .dog2 .ORlaptop .ORscreen::before {
+    display: block;
+    content: "";
+    height: 17px;
+    width: 10px;
+    position: relative;
+    top: 38px;
+    left: 50px;
+    border-radius: 6px;
+    background: #F07E42;
+  }
+  .dog2 .ORlaptop .ORscreen::after {
+    display: block;
+    content: "";
+    height: 17px;
+    width: 10px;
+    position: relative;
+    top: 21px;
+    left: 64px;
+    border-radius: 6px;
+    background: #F07E42;
+  }
+  .dog2 .ORlaptop .ORkeyboard {
+    height: 12px;
+    width: 132px;
+    position: relative;
+    left: 14px;
+    border-radius: 6px 0 0 6px;
+    background: #F07E42;
+  }
+  .dog2 .ORlaptop .ORkeyboard::before {
+    display: block;
+    content: "";
+    height: 12px;
+    width: 72px;
+    position: relative;
+    left: 128px;
+    border-radius: 6px;
+    background: #FFCA95;
+  }
+  .dog2 .head2 .scar {
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: darkred;
+    top: 25px; /* Ajusta según la posición deseada */
+    left: 30px; /* Ajusta según la posición deseada */
+    transform: rotate(-20deg);
+}
+
+.dog2 .head2 .scar::before,
+.dog2 .head2 .scar::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background-color: darkred;
+}
+
+.dog2 .head2 .scar::before {
+    left: 5px;
+    top: -4px;
+    transform: rotate(45deg);
+}
+
+.dog2 .head2 .scar::after {
+    left: 20px;
+    top: -4px;
+    transform: rotate(-45deg);
+}
+.dog2 .head2 .scar1 {
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: darkred;
+    top: 40px; /* Ajusta según la posición deseada */
+    left: 80px; /* Ajusta según la posición deseada */
+    transform: rotate(-60deg);
+}
+
+.dog2 .head2 .scar1::before,
+.dog2 .head2 .scar1::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background-color: darkred;
+}
+
+.dog2 .head2 .scar1::before {
+    left: 5px;
+    top: -4px;
+    transform: rotate(45deg);
+}
+
+.dog2 .head2 .scar1::after {
+    left: 20px;
+    top: -4px;
+    transform: rotate(-45deg);
+}
+.mosca {
+    width: 6px;
+    height: 6px;
+    background-color: rgb(177, 172, 171);
+    border-radius: 50%;
+    position: absolute;
+    animation: flyAround 5s infinite linear;
+    z-index: 9999;
+}
+
+.mosca::before,
+.mosca::after {
+    content: "";
+    width: 3px;
+    height: 3px;
+    background-color:  rgb(177, 172, 171);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.mosca::before {
+    top: -3px;
+    left: -2px;
+}
+
+.mosca::after {
+    top: -3px;
+    right: -2px;
+}
+
+.mosca1 {
+    width: 6px;
+    height: 6px;
+    background-color: rgb(8, 8, 8);
+    border-radius: 50%;
+    position: absolute;
+    animation: flyAround1 6s infinite linear;
+    z-index: 9999;
+}
+
+.mosca1::before,
+.mosca1::after {
+    content: "";
+    width: 3px;
+    height: 3px;
+    background-color:  rgb(8, 8, 8);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.mosca1::before {
+    top: -3px;
+    left: -2px;
+}
+
+.mosca1::after {
+    top: -3px;
+    right: -2px;
+}
+.mosca2 {
+    width: 6px;
+    height: 6px;
+    background-color: rgb(61, 42, 235);
+    border-radius: 50%;
+    position: absolute;
+    animation: flyAround2 4.5s infinite linear;
+    z-index: 9999;
+}
+
+.mosca2::before,
+.mosca2::after {
+    content: "";
+    width: 3px;
+    height: 3px;
+    background-color:  rgb(61, 42, 235);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.mosca2::before {
+    top: -3px;
+    left: -2px;
+}
+
+.mosca2::after {
+    top: -3px;
+    right: -2px;
+}
+@keyframes flyAround {
+    0% { top: 10px; left: 10px; transform: rotate(0deg); }
+    25% { top: 20px; left: 50px; transform: rotate(90deg); }
+    50% { top: 40px; left: 80px; transform: rotate(180deg); }
+    75% { top: 20px; left: 30px; transform: rotate(270deg); }
+    100% { top: 10px; left: 10px; transform: rotate(360deg); }
+}
+
+@keyframes flyAround1 {
+    0% { top: 40px; left: 50px; transform: rotate(0deg); }
+    25% { top: 80px; left: 70px; transform: rotate(90deg); }
+    50% { top: 120px; left: 90px; transform: rotate(180deg); }
+    75% { top: 80px; left: 70px; transform: rotate(270deg); }
+    100% { top: 40px; left: 50px; transform: rotate(360deg); }
+}
+
+@keyframes flyAround2 {
+    0% { top: 30px; left: 20px; transform: rotate(0deg); }
+    25% { top: 60px; left: 60px; transform: rotate(90deg); }
+    50% { top: 100px; left: 40px; transform: rotate(180deg); }
+    75% { top: 80px; left: 60px; transform: rotate(270deg); }
+    100% { top: 30px; left: 20px; transform: rotate(360deg); }
+}
+
+  @keyframes dogLeftType {
+    50% {
+      transform: none;
+    }
+    52% {
+      transform: translateY(-8px);
+    }
+    56% {
+      transform: none;
+    }
+    58% {
+      transform: translateY(-8px);
+    }
+    60% {
+      transform: none;
+    }
+    64% {
+      transform: translateY(-8px);
+    }
+    66% {
+      transform: none;
+    }
+    68% {
+      transform: translateY(-8px);
+    }
+    70% {
+      transform: none;
+    }
+    72% {
+      transform: translateY(-8px);
+    }
+    76% {
+      transform: none;
+    }
+  }
+  @keyframes dogRightType {
+    54% {
+      transform: none;
+    }
+    56% {
+      transform: translateY(-8px);
+    }
+    58% {
+      transform: none;
+    }
+    60% {
+      transform: translateY(-8px);
+    }
+    62% {
+      transform: none;
+    }
+    66% {
+      transform: translateY(-8px);
+    }
+    68% {
+      transform: none;
+    }
+    70% {
+      transform: translateY(-8px);
+    }
+    72% {
+      transform: none;
+    }
+    74% {
+      transform: translateY(-8px);
+    }
+    78% {
+      transform: none;
+    }
+  }
+  @keyframes dogRead {
+    5% {
+      transform: none;
+    }
+    17% {
+      transition-timing-function: ease-out;
+      transform: translateX(-5px);
+    }
+    25% {
+      transform: none;
+    }
+    37% {
+      transition-timing-function: ease-out;
+      transform: translateX(-5px);
+    }
+    45% {
+      transform: none;
+    }
+  }
+  

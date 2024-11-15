@@ -1,0 +1,78 @@
+.ufo-container {
+    top: -500px;
+    position: relative;
+    animation: flyOvni 10s infinite linear;
+   }
+.ufo-glass {
+    position: absolute;
+    z-index: 2;
+    width: 30px; /* Reducido de 40px */
+    height: 15px; /* Reducido de 20px */
+    margin-left: 160px; /* Ajustado para centrarse */
+    margin-top: 90px; /* Ajustado para posición */
+    background: #8dddff;
+    border-top-left-radius: 30px; /* Reducido de 40px */
+    border-top-right-radius: 30px; /* Reducido de 40px */
+    top: 310px;
+    left: 125px;
+    z-index: 9999;
+    
+}
+
+/* Main ufo part */
+.ufo-main {
+    position: absolute;
+    z-index: 1;
+    width: 100px; /* Reducido de 120px */
+    height: 40px; /* Reducido de 50px */
+    margin-left: 90px; /* Ajustado para centrarse */
+    margin-top: 130px; /* Ajustado para posición */
+    background: #7e8ca6;
+    border-radius: 100px / 40px; /* Reducido de 120px / 50px */
+    z-index: 9999;
+    left: 160px;
+    top: 284px;
+    
+}
+
+/* 3 Windows if passengers */
+.ufo-window {
+    position: relative;
+    display: inline-block;
+    z-index: 3;
+    width: 15px; /* Reducido de 20px */
+    height: 15px; /* Reducido de 20px */
+    background: #56627a;
+    margin-right: 8px; /* Ajustado el margen */
+    margin-top: 18px; /* Ajustado el margen */
+    border-radius: 15px; /* Reducido de 20px */
+   
+}
+.ufo-window:first-child {
+    margin-left: 20px; /* Ajustado el margen */
+
+}
+
+/* Light under the ufo to catch people */
+.ufo-light {
+    position: absolute;
+    margin-top: 120px; /* Reducido para ajustarse */
+    margin-left: 80px; /* Ajustado para centrarse */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 40px 80px 40px; /* Reducido */
+    border-color: transparent transparent #fff3b9 transparent;
+    left: 180px;
+    top: 300px;
+    
+}
+@keyframes flyOvni {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-40px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+}
+
+

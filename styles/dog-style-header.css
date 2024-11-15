@@ -1,0 +1,268 @@
+.center-header {
+    height: 50px;
+    width: 50px;
+    margin: 2rem 0;
+    display: grid;
+    grid-template-rows: 2rem 3rem 2rem 2rem;
+    justify-self: center;
+  }
+  .dog-header {
+    display: grid;
+    justify-self: center;
+    transform: translate(0, -50%);
+  }
+  .dog-header .ears2-header {
+    height: 0;
+    width: 0;
+    position: relative;
+    left: 20px;
+    border-bottom: 10px solid #000000;
+    border-left: 7px solid transparent;
+    border-right: 10px solid transparent;
+  }
+  .dog-header .ears2-header::before {
+    display: block;
+    content: "";
+    height: 0;
+    width: 0;
+    position: relative;
+    left: 20px;
+    border-bottom: 10px solid #000000;
+    border-left: 7px solid transparent;
+    border-right: 10px solid transparent;
+  }
+  .dog-header .head2-header {
+    height: 40px;
+    width: 80px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 8px 0 0 #a7a9bb;
+    border-radius: 35px;
+    background: #fca2a2;
+  }
+  .dog-header .head2-header .eyes2-header {
+    height: 8px;
+    width: 8px;
+    position: relative;
+    top: 20px;
+    left: 28px;
+    border-radius: 100%;
+    animation: 9s dogRead infinite;
+    background: black;
+  }
+  .dog-header .head2-header .eyes2-header::before {
+    display: block;
+    content: "";
+    height: 8px;
+    width: 8px;
+    position: relative;
+    left: 10px;
+    border-radius: 100%;
+    background: black;
+  }
+  .dog-header .head2-header .nose2-header {
+    height: 15px;
+    width: 24px;
+    position: relative;
+    top: 22px;
+    left: 23px;
+    border-radius: 20px;
+    background: #FBF1D8;
+  }
+  .dog-header .head2-header .nose2-header::before {
+    display: block;
+    content: "";
+    height: 0;
+    width: 0;
+    position: relative;
+    top: 3px;
+    left: 6px;
+    border-radius: 15px;
+    border-top: 6px solid black;
+    border-left: 6px solid transparent;
+    border-right: 5px solid transparent;
+  }
+  .dog-header .body2-header {
+    height: 55px;
+    width: 110px;
+    position: relative;
+    top: -22px;
+    z-index: 1;
+    border-radius: 55px;
+    background: #fca2a2;
+  }
+  .dog-header .body2-header .left-paw2-header {
+    height: 13px;
+    width: 19px;
+    position: relative;
+    top: 35px;
+    left: 15px;
+    border-radius: 12px;
+    animation: 2s dogLeftType infinite;
+    background: #FBF1D8;
+  }
+  .dog-header .body2-header .right-paw2-header {
+    height: 13px;
+    width: 19px;
+    position: relative;
+    top: 22px;
+    left: 35px;
+    border-radius: 12px;
+    animation: 2s dogRightType infinite;
+    background: #FBF1D8;
+  }
+  .dog-header .tail2-header {
+    height: 17px;
+    width: 35px;
+    position: relative;
+    top: -39px;
+    left: 85px;
+    z-index: 0;
+    border-radius: 0 17px 17px 0;
+    background: #a7a9bb;
+  }
+  .dog-header .ORlaptop-header {
+    position: relative;
+    top: -80px;
+    left: -45px;
+    z-index: 2;
+  }
+  .dog-header .ORlaptop-header .ORscreen-header {
+    height: 40px;
+    width: 60px;
+    border-radius: 8px;
+    transform: skew(18deg);
+    background: #000000;
+  }
+  .dog-header .ORlaptop-header .ORscreen-header::before {
+    display: block;
+    content: "";
+    height: 8px;
+    width: 5px;
+    position: relative;
+    top: 20px;
+    left: 25px;
+    border-radius: 6px;
+    background: #fffdfc;
+  }
+  .dog-header .ORlaptop-header .ORscreen-header::after {
+    display: block;
+    content: "";
+    height: 8px;
+    width: 5px;
+    position: relative;
+    top: 12px;
+    left: 32px;
+    border-radius: 6px;
+    background: #fffdfc;
+  }
+  .dog-header .ORlaptop-header .ORkeyboard-header {
+    height: 6px;
+    width: 80px;
+    position: relative;
+    left: 8px;
+    border-radius: 6px 0 0 6px;
+    background: #000000;
+  }
+  .dog-header .ORlaptop-header .ORkeyboard-header::before {
+    display: block;
+    content: "";
+    height: 6px;
+    width: 35px;
+    position: relative;
+    left: 70px;
+    border-radius: 6px;
+    background: #fffdfc;
+  }
+  
+  
+  @keyframes dogLeftType {
+    50% {
+      transform: none;
+    }
+    52% {
+      transform: translateY(-8px);
+    }
+    56% {
+      transform: none;
+    }
+    58% {
+      transform: translateY(-8px);
+    }
+    60% {
+      transform: none;
+    }
+    64% {
+      transform: translateY(-8px);
+    }
+    66% {
+      transform: none;
+    }
+    68% {
+      transform: translateY(-8px);
+    }
+    70% {
+      transform: none;
+    }
+    72% {
+      transform: translateY(-8px);
+    }
+    76% {
+      transform: none;
+    }
+  }
+  @keyframes dogRightType {
+    54% {
+      transform: none;
+    }
+    56% {
+      transform: translateY(-8px);
+    }
+    58% {
+      transform: none;
+    }
+    60% {
+      transform: translateY(-8px);
+    }
+    62% {
+      transform: none;
+    }
+    66% {
+      transform: translateY(-8px);
+    }
+    68% {
+      transform: none;
+    }
+    70% {
+      transform: translateY(-8px);
+    }
+    72% {
+      transform: none;
+    }
+    74% {
+      transform: translateY(-8px);
+    }
+    78% {
+      transform: none;
+    }
+  }
+  @keyframes dogRead {
+    5% {
+      transform: none;
+    }
+    17% {
+      transition-timing-function: ease-out;
+      transform: translateX(-5px);
+    }
+    25% {
+      transform: none;
+    }
+    37% {
+      transition-timing-function: ease-out;
+      transform: translateX(-5px);
+    }
+    45% {
+      transform: none;
+    }
+  }
+  

@@ -1,0 +1,394 @@
+.center {
+    height: 100%;
+    width: 100%;
+    margin: 2rem 0;
+    display: grid;
+    grid-template-rows: 2rem 3rem 2rem 2rem;
+    justify-self: center;
+  }
+  .dog {
+    display: grid;
+    justify-self: center;
+    transform: translate(0, -50%);
+  }
+  .dog .ears2 {
+    height: 0;
+    width: 0;
+    position: relative;
+    left: 30px;
+    border-bottom: 27px solid #5b63d6;
+    border-left: 23px solid transparent;
+    border-right: 10px solid transparent;
+  }
+  .dog .ears2::before {
+    display: block;
+    content: "";
+    height: 0;
+    width: 0;
+    position: relative;
+    left: 33px;
+    border-bottom: 27px solid #666ff0;
+    border-left: 10px solid transparent;
+    border-right: 23px solid transparent;
+  }
+  .dog .head2 {
+    height: 74px;
+    width: 140px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 8px 0 0 #6a73ee;
+    border-radius: 35px;
+    background: #8e94eb;
+  }
+  .dog .head2 .eyes2 {
+    height: 12px;
+    width: 12px;
+    position: relative;
+    top: 37px;
+    left: 50px;
+    border-radius: 100%;
+    animation: 9s dogRead infinite;
+    background: black;
+  }
+  .dog .head2 .eyes2::before {
+    display: block;
+    content: "";
+    height: 12px;
+    width: 12px;
+    position: relative;
+    left: 18px;
+    border-radius: 100%;
+    background: black;
+  }
+  .dog .head2 .nose2 {
+    height: 30px;
+    width: 48px;
+    position: relative;
+    top: 40px;
+    left: 37px;
+    border-radius: 20px;
+    background: #FBF1D8;
+  }
+  .dog .head2 .nose2::before {
+    display: block;
+    content: "";
+    height: 0;
+    width: 0;
+    position: relative;
+    top: 3px;
+    left: 9px;
+    border-radius: 15px;
+    border-top: 12px solid black;
+    border-left: 12px solid transparent;
+    border-right: 10px solid transparent;
+  }
+  .dog .body2 {
+    height: 110px;
+    width: 200px;
+    position: relative;
+    top: -30px;
+    z-index: 1;
+    border-radius: 55px;
+    background: #8e94eb;
+  }
+  .dog .body2 .left-paw2 {
+    height: 25px;
+    width: 37px;
+    position: relative;
+    top: 70px;
+    left: 15px;
+    border-radius: 12px;
+    animation: 9s dogLeftType infinite;
+    background: #FBF1D8;
+  }
+  .dog .body2 .right-paw2 {
+    height: 25px;
+    width: 37px;
+    position: relative;
+    top: 45px;
+    left: 60px;
+    border-radius: 12px;
+    animation: 9s dogRightType infinite;
+    background: #FBF1D8;
+  }
+  .dog .tail2 {
+    height: 34px;
+    width: 70px;
+    position: relative;
+    top: -64px;
+    left: 150px;
+    z-index: 0;
+    border-radius: 0 17px 17px 0;
+    background: #666ff0;
+  }
+  .dog .ORlaptop {
+    position: relative;
+    top: -161px;
+    left: -103px;
+    z-index: 2;
+  }
+  .dog .ORlaptop .ORscreen {
+    height: 85px;
+    width: 130px;
+    border-radius: 8px;
+    transform: skew(18deg);
+    background: #FFCA95;
+  }
+  .dog .ORlaptop .ORscreen::before {
+    display: block;
+    content: "";
+    height: 17px;
+    width: 10px;
+    position: relative;
+    top: 38px;
+    left: 50px;
+    border-radius: 6px;
+    background: #F07E42;
+  }
+  .dog .ORlaptop .ORscreen::after {
+    display: block;
+    content: "";
+    height: 17px;
+    width: 10px;
+    position: relative;
+    top: 21px;
+    left: 64px;
+    border-radius: 6px;
+    background: #F07E42;
+  }
+  .dog .ORlaptop .ORkeyboard {
+    height: 12px;
+    width: 132px;
+    position: relative;
+    left: 14px;
+    border-radius: 6px 0 0 6px;
+    background: #F07E42;
+  }
+  .dog .ORlaptop .ORkeyboard::before {
+    display: block;
+    content: "";
+    height: 12px;
+    width: 72px;
+    position: relative;
+    left: 128px;
+    border-radius: 6px;
+    background: #FFCA95;
+  }
+  .dog .hat {
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    top: -20px;
+    left: 25px;
+    background: #5a4631; /* Color marrón oscuro */
+    border-radius: 50% 50% 0 0;
+    z-index: 9999;
+  }
+  
+  .dog .hat::before {
+    content: "";
+    width: 120px;
+    height: 10px;
+    position: absolute;
+    top: 40px;
+    left: -10px;
+    background: #5a4631; /* Parte del ala del sombrero */
+    border-radius: 10px;
+  }
+  .dog .glasses {
+    position: absolute;
+    top: 30px;
+    left: 35px;
+    display: flex;
+    gap: 8px;
+    animation: 9s dogRead infinite;
+  }
+  
+  .dog .glasses .glass {
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  .dog .glasses::before
+   {
+    content: "";
+    width: 10px;
+    height: 3px;
+    background: black;
+    position: relative;
+    top: 8px;
+  }
+  
+  .dog .glasses::before {
+    left: 25px;
+  }
+  
+  .dog .coffee-cup {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 70px;
+    left: 120px;
+    background: #d9d9d9; /* Color de la taza */
+    border-radius: 0 0 10px 10px;
+    border: 2px solid #333; /* Borde de la taza */
+    overflow: hidden;
+  }
+  
+  .dog .coffee-cup::before {
+    content: "";
+    width: 10px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 100px;
+    border: 2px solid #333;
+    border-radius: 20px;
+    background: transparent; /* Asa de la taza */
+  }
+  
+  .dog .coffee-cup::after {
+    content: "";
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #6f4e37; /* Color del café */
+  }
+  
+  .smoke {
+    width: 20px;
+    height: 10px;
+    background-color: rgb(177, 172, 171);
+    border-radius: 50%;
+    position: absolute;
+    left: 235px;
+    animation: flySmoke 5s infinite linear;
+    z-index: 9999;
+}
+
+.smoke::before,
+.smoke::after {
+    content: "";
+    width: 10px;
+    height: 8px;
+    background-color:  rgb(177, 172, 171);
+    border-radius: 50%;
+    position: absolute;
+    top:-20px;
+}
+
+
+@keyframes flySmoke {
+  0% {
+    top: 50px;
+    opacity: 0.8;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-20px) scale(1.2) rotate(15deg);
+  }
+  100% {
+    top: -80px;
+    opacity: 0;
+    transform: translateY(-50px) scale(1.5) rotate(-15deg);
+  }
+}
+
+
+  
+  @keyframes dogLeftType {
+    50% {
+      transform: none;
+    }
+    52% {
+      transform: translateY(-8px);
+    }
+    56% {
+      transform: none;
+    }
+    58% {
+      transform: translateY(-8px);
+    }
+    60% {
+      transform: none;
+    }
+    64% {
+      transform: translateY(-8px);
+    }
+    66% {
+      transform: none;
+    }
+    68% {
+      transform: translateY(-8px);
+    }
+    70% {
+      transform: none;
+    }
+    72% {
+      transform: translateY(-8px);
+    }
+    76% {
+      transform: none;
+    }
+  }
+  @keyframes dogRightType {
+    54% {
+      transform: none;
+    }
+    56% {
+      transform: translateY(-8px);
+    }
+    58% {
+      transform: none;
+    }
+    60% {
+      transform: translateY(-8px);
+    }
+    62% {
+      transform: none;
+    }
+    66% {
+      transform: translateY(-8px);
+    }
+    68% {
+      transform: none;
+    }
+    70% {
+      transform: translateY(-8px);
+    }
+    72% {
+      transform: none;
+    }
+    74% {
+      transform: translateY(-8px);
+    }
+    78% {
+      transform: none;
+    }
+  }
+  @keyframes dogRead {
+    5% {
+      transform: none;
+    }
+    17% {
+      transition-timing-function: ease-out;
+      transform: translateX(-5px);
+    }
+    25% {
+      transform: none;
+    }
+    37% {
+      transition-timing-function: ease-out;
+      transform: translateX(-5px);
+    }
+    45% {
+      transform: none;
+    }
+  }
+  

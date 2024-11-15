@@ -1,101 +1,103 @@
-import Image from "next/image";
+"use client"
+import Link from 'next/link';
+import Dog from "@/components/perro/dog";
+import Burbuja from "@/components/burbuja-dialogo";
+import Header from "@/components/header";
+import Footer from "@/components/footer/footer";
+import { Merriweather } from 'next/font/google';
+import { empezarHistoria } from "@/services/historia/api";
+import '@/styles/dog-style.css';
+import {DialogLanding  } from '@/data/dialogs';
+const merriweather = Merriweather({
+    subsets: ['latin'],
+    weight: ['400', '700'], // Define los pesos que quieras usar
+});
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+const landing = () => {
+ 
+    const handleEmpezar = async () => {
+     await empezarHistoria();
+      };
+      
+    return (
+        <div className='w-full min-h-screen '>
+        <section className=" text-black-600 body-font text-md font-medium ">
+            <Header />
+            <div className="container px-5 py-5 mx-auto flex flex-wrap">
+                <div className="lg:w-1/2 pb-6 w-full rounded-lg">
+                    <div className="relative flex flex-col items-center space-y-16 mt-8">
+                        <Burbuja messages={DialogLanding} />
+                        <Dog />
+                        <Link href="/pages/titulo"
+                            className={`w-32 animate-bounceHorizontal focus:animate-none hover:animate-none mt-4 px-4 py-2 bg-orange-400 rounded-lg text-md font-medium text-white tracking-wide flex items-center justify-center text-white bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-orange-300 dark:focus:ring-orange-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-orange-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2`}>
+                            <button
+                                onClick={handleEmpezar}>
+                                <span className={`${merriweather.className} ml-2`}>Comenzar</span>
+                            </button>
+                            <span>✏️</span>
+                        </Link>
+                    </div>
+                </div>
+                <div className="flex flex-col flex-wrap mt-8 hidden md:block">
+                    <div className="relative flex flex-col text-gray-700 border-gray-700 dark:border-white-700 dark:text-gray-400">
+                        <div className=''>
+                            <h1 className={`${merriweather.className} ml-2 font-bold text-xl text-white`}>Bienvenidos a WordsToo </h1>
+                            <h5 className={`${merriweather.className} ml-64 font-bold text-xs text-white`}>(La historia continúa...)</h5>
+                            <ul className="mt-8 flex flex-col space-y-2">
+                                <li className="flex"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+                                    stroke="currentColor" aria-hidden="true" className="mr-2 mb-8 h-auto w-6 text-blue-600 sm:w-7">
+                                    <path strokeLinecap="round" strokeWidth="round"
+                                        d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z">
+                                    </path>
+                                </svg>
+                                    <p className={`${merriweather.className} ml-2 text-base text-slate-700 sm:text-lg`}>Elegí el título de tu historia</p>
+                                </li>
+                                <li className="flex"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+                                    stroke="currentColor" aria-hidden="true" className="mr-2 mb-8 h-auto w-6 text-blue-600 sm:w-7">
+                                    <path strokeLinecap="round" strokeWidth="round"
+                                        d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z">
+                                    </path>
+                                </svg>
+                                    <p className={`${merriweather.className} ml-2 text-base text-slate-700 sm:text-lg`}>Selecciona tu género favorito</p>
+                                </li>
+                                <li className="flex"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+                                    stroke="currentColor" aria-hidden="true" className="mr-2 mb-8 h-auto w-6 text-blue-600 sm:w-7">
+                                    <path strokeLinecap="round" strokeWidth="round"
+                                        d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z">
+                                    </path>
+                                </svg>
+                                    <p className={`${merriweather.className} ml-2 text-base text-slate-700 sm:text-lg`}>Empezala a escribir...</p>
+                                </li>
+                                <li className="flex"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+                                    stroke="currentColor" aria-hidden="true" className="mr-2 mb-8 h-auto w-6 text-blue-600 sm:w-7">
+                                    <path strokeLinecap="round" strokeWidth="round"
+                                        d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z">
+                                    </path>
+                                </svg>
+                                    <p className={`${merriweather.className} ml-2 text-base text-slate-700 sm:text-lg`}>Blue nuestra IA, te acompañara en el proceso</p>
+                                </li>
+                                <li className="flex"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+                                    stroke="currentColor" aria-hidden="true" className="mr-2 mb-8 h-auto w-6 text-blue-600 sm:w-7">
+                                    <path strokeLinecap="round" strokeWidth="round"
+                                        d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z">
+                                    </path>
+                                </svg>
+                                    <p className={`${merriweather.className} ml-2 text-base text-slate-700 sm:text-lg`}>Comparte o imprime cuando la termine</p>
+                                </li>
+                            </ul>
+                        </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+                    </div>
+                </div>
+
+            </div>
+           
+               
+            
+
+        </section >
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
-}
+    );
+};
+
+export default landing;

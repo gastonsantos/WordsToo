@@ -1,0 +1,73 @@
+
+
+.heart {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    transform: rotate(-45deg);
+    margin-left: 150px;
+    animation: moveUpDown 2s infinite ease-in-out;
+    
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    
+  }
+  
+  .heart::before {
+    top: -25px;
+    left: 0;
+  }
+  
+  .heart::after {
+    left: 25px;
+    top: 0;
+  }
+
+  .heart1 {
+    position: absolute;
+    width: 30px; /* Tamaño reducido */
+    height: 30px; /* Tamaño reducido */
+    background-color: red;
+    transform: rotate(-45deg);
+    margin: -30px; /* Ajuste del margen para el tamaño */
+    animation: moveUpDown 2s infinite ease-in-out;
+}
+
+.heart1::before,
+.heart1::after {
+    content: "";
+    position: absolute;
+    width: 30px; /* Tamaño reducido */
+    height: 30px; /* Tamaño reducido */
+    background-color: red;
+    border-radius: 50%;
+}
+
+.heart1::before {
+    top: -15px; /* Ajuste para el tamaño reducido */
+    left: 0;
+}
+
+.heart1::after {
+    left: 15px; /* Ajuste para el tamaño reducido */
+    top: 0;
+}
+
+/* Animación de movimiento */
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0) rotate(-45deg);
+    }
+    50% {
+        transform: translateY(20px) rotate(-45deg);
+    }
+}
