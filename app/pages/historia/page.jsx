@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import DogFiccion from "@/components/perro/dog-ficcion";
 import DogLove from "@/components/perro/dog-love";
 import DogTerror from "@/components/perro/dog-terror";
@@ -12,7 +12,7 @@ import Image from "next/image";
 import { sendHistoryToIa, convertirPdf } from "@/services/historia/api";
 import { Merriweather } from 'next/font/google';
 import { DialogoAventura, MaxAyuda, DialogoTerror, DialogoCienciaFiccion, DialogoRomance } from '@/data/dialogs';
-import { TourProvider, useTour, Tour } from '@reactour/tour'
+
 const merriweather = Merriweather({
   subsets: ['latin'],
   weight: ['400', '700'], // Define los pesos que quieras usar

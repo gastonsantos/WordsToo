@@ -6,7 +6,6 @@ import Burbuja from "@/components/burbuja-dialogo";
 import Header from "@/components/header";
 import { useRouter } from 'next/navigation';
 import Button from "@/components/button/back";
-import Footer from "@/components/footer/footer";
 import { Merriweather } from 'next/font/google';
 import { DialogoTitulo } from '@/data/dialogs';
 

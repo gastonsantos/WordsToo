@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Dog from "@/components/perro/dog";
 import Burbuja from "@/components/burbuja-dialogo";
 import Header from "@/components/header";
-import Footer from "@/components/footer/footer";
 import { Merriweather } from 'next/font/google';
 import { empezarHistoria } from "@/services/historia/api";
 import '@/styles/dog-style.css';

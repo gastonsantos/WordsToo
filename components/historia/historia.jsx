@@ -12,7 +12,7 @@ import Image from "next/image";
 import { sendHistoryToIa, convertirPdf, mejoraHistoria } from "@/services/historia/api";
 import { Merriweather } from 'next/font/google';
 import { DialogoAventura, MaxAyuda, DialogoTerror, DialogoCienciaFiccion, DialogoRomance } from '@/data/dialogs';
-import { TourProvider, useTour, Tour } from '@reactour/tour'
+import { useTour } from '@reactour/tour'
 const merriweather = Merriweather({
     subsets: ['latin'],
     weight: ['400', '700'], // Define los pesos que quieras usar

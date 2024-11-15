@@ -1,12 +1,11 @@
 "use client";
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Dog from "@/components/perro/dog";
 import '@/styles/dog-style.css';
 import Burbuja from "@/components/burbuja-dialogo";
 import Header from "@/components/header";
 import { useRouter } from 'next/navigation';
 import Button from "@/components/button/back";
-import Footer from "@/components/footer/footer";
 import { Merriweather } from 'next/font/google';
 import {DialogoGenero} from '@/data/dialogs';
 
