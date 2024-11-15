@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from 'react';
+import { useEffect, useState,useRef } from 'react';
 import DogFiccion from "@/components/perro/dog-ficcion";
 import DogLove from "@/components/perro/dog-love";
 import DogTerror from "@/components/perro/dog-terror";
