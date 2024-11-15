@@ -78,20 +78,7 @@ export default function Historia() {
 
 
   }, [contadorDeUsos]);
-  const steps = [
-    {
-      selector: '#elemento1',
-      content: 'Este es el botón de inicio, úsalo para comenzar.',
-    },
-    {
-      selector: '#elemento2',
-      content: 'Aquí puedes ver el menú de navegación.',
-    },
-    {
-      selector: '#elemento3',
-      content: 'Esta es la sección principal donde puedes ver el contenido.',
-    },
-  ];
+
   const handleStoryChange = (event) => {
 
     setStoryText(event.target.value);
