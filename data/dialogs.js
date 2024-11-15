@@ -68,7 +68,7 @@ const DialogoCienciaFiccion = [
     "Luego, yo la continuo...",
     "¿Te parece bien?",
     "¡Perfecto! Empecemos",
-    "Cuando termines presiona el botón 'Continúa'",
+    "Cuando termines presiona el botón 'Continúa...'",
     "Y yo voy a continuar con tu historia de ciencia ficción",
     "..."
 ];
@@ -81,7 +81,7 @@ const DialogoRomance = [
     "Luego, yo la continuo...",
     "¿Te parece bien?",
     "¡Perfecto! Empecemos",
-    "Cuando termines presiona el botón 'Continúa'",
+    "Cuando termines presiona el botón 'Continúa...'",
     "Y yo voy a continuar con tu historia romántica",
     "..."
 ];
