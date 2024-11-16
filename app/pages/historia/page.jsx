@@ -116,7 +116,7 @@ export default function Historia() {
     }
   };
   const handleReescribir = async () => {
-    !isButtonEnabled
+    
     SumarContador();
     const data = {
       titulo: cuento.titulo,
@@ -131,7 +131,7 @@ export default function Historia() {
 
 
         setStoryText(response.data);
-        isButtonEnabled
+      
 
       }
     } catch (error) {
