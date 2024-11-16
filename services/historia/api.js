@@ -16,6 +16,8 @@ async function sendHistoryToIa(data){
       throw error; 
   }
   }
+  
+  
 
   async function mejoraHistoria(data){
     try {

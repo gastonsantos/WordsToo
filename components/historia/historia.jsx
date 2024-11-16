@@ -13,6 +13,8 @@ import { sendHistoryToIa, convertirPdf, mejoraHistoria } from "@/services/histor
 import { Merriweather } from 'next/font/google';
 import { DialogoAventura, MaxAyuda, DialogoTerror, DialogoCienciaFiccion, DialogoRomance } from '@/data/dialogs';
 import { useTour } from '@reactour/tour'
+import { ThreeDot } from "react-loading-indicators";
+
 const merriweather = Merriweather({
     subsets: ['latin'],
     weight: ['400', '700'], // Define los pesos que quieras usar
@@ -29,7 +31,8 @@ export default function Historia() {
         contenido: ''
     });
 
-
+    //Const del loading
+    const [loading, setLoading] = useState(false);
     const [messages, setMessages] = useState([]);
     const [backgroundImage, setBackgroundImage] = useState(null);
     const [storyText, setStoryText] = useState("");
@@ -100,14 +103,16 @@ export default function Historia() {
 
     };
 
+    /*Funciones de la api*/
     const handleContinue = async () => {
         SumarContador();
         const data = {
             titulo: cuento.titulo,
             genero: cuento.genero,
             contenido: storyText
-        }
+        };
         localStorage.setItem('contenido', storyText);
+        setLoading(true); // Inicia la pantalla de carga
         try {
             const response = await sendHistoryToIa(data);
             if (response && response.data) {
@@ -115,29 +120,29 @@ export default function Historia() {
             }
         } catch (error) {
             console.log("Error", error);
+        } finally {
+            setLoading(false); // Finaliza la pantalla de carga
         }
     };
-    const handleReescribir = async () => {
-        
-        setStoryText("");
-        SumarContador();
 
+    const handleReescribir = async () => {
+        SumarContador();
         const data = {
             titulo: cuento.titulo,
             genero: cuento.genero,
             contenido: storyText
         };
-
-        localStorage.removeItem('contenido');
-
+        localStorage.setItem('contenido', storyText);
+        setLoading(true); // Inicia la pantalla de carga
         try {
             const response = await mejoraHistoria(data);
             if (response && response.data) {
-                console.log("Historia", response.data);
                 setStoryText(response.data);
             }
         } catch (error) {
             console.log("Error", error);
+        } finally {
+            setLoading(false); // Finaliza la pantalla de carga
         }
     };
 
@@ -175,7 +180,7 @@ export default function Historia() {
                         </div>
 
                     </div>
-                    
+
                 )}
             </div>
             <div className="h-screen relative z-10 bg-opacity-10">
@@ -225,9 +230,9 @@ export default function Historia() {
 
                             {/* Título del cuento (Centro) */}
                             <div className='bg-black opacity-70 p-4 rounded-lg'>
-                            <h1 className={`${merriweather.className} text-2xl font-bold text-stone-100 text-center items-center`}>
-                                {cuento.titulo}
-                            </h1>
+                                <h1 className={`${merriweather.className} text-2xl font-bold text-stone-100 text-center items-center`}>
+                                    {cuento.titulo}
+                                </h1>
                             </div>
                             {/* Contador de Ayudas (Derecha) */}
                             <div className="six-step right-0 m-4 w-16 h-16 flex items-center justify-center text-2xl text-white bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-orange-300 dark:focus:ring-orange-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-orange-800/80 font-medium rounded-full  px-5 py-2.5 text-center me-2 mb-2">
@@ -245,44 +250,55 @@ export default function Historia() {
                             placeholder="Escribe aquí tu historia..."
                         ></textarea>
 
-                        {/* Contenedor de botones debajo del área de texto */}
-                        <div className="flex items-center justify-between mb-4 w-full">
-                            {/* Botón Continúa (Izquierda) */}
-                            <button
-                                onClick={handleContinue}
-                                disabled={!isButtonEnabled || contadorDeUsos >= 5}
-                                className={`third-step py-2 px-6 rounded ${isButtonEnabled || contadorDeUsos >= 5
-                                    ? 'text-white bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-orange-300 dark:focus:ring-orange-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-orange-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2'
-                                    : 'text-white cursor-not-allowed bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-orange-300 dark:focus:ring-orange-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-orange-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2'
-                                    }`}
-                            >
-                                Continúa...
-                            </button>
 
-                            {/* Botón Reescribir (Centro) */}
-                            <button
-                                onClick={handleReescribir}
-                                disabled={!isButtonEnabled || contadorDeUsos >= 5}
-                                className={`four-step py-2 px-6 rounded ${isButtonEnabled || contadorDeUsos >= 5
-                                    ? 'text-white bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-orange-300 dark:focus:ring-orange-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-orange-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2'
-                                    : 'text-white cursor-not-allowed bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-orange-300 dark:focus:ring-orange-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-orange-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2'
-                                    }`}
-                            >
-                                Reescribir
-                            </button>
 
-                            {/* Botón Descargar (Derecha) */}
-                            <button
-                                onClick={handleImprimir}
-                                disabled={!isButtonEnabled || contadorDeUsos >= 5}
-                                className={`five-step py-2 px-6 rounded ${isButtonEnabled || contadorDeUsos >= 5
-                                    ? 'text-white bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-orange-300 dark:focus:ring-orange-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-orange-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2'
-                                    : 'text-white cursor-not-allowed bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-orange-300 dark:focus:ring-orange-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-orange-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2'
-                                    }`}
-                            >
-                                Descargar
-                            </button>
-                        </div>
+                        {loading ? ( // Mostrar la pantalla de carga si está cargando
+
+                            <div className="loading-container text-center bg-black opacity-70 p-4 rounded-lg">
+                                <div className='m-4 text-3xl font-bold text-[#ffffff]  '>
+                                    Espéra, por favor
+                                    <ThreeDot variant="pulsate" color="#ffffff" size="large" text="" textColor="" />
+                                </div>
+                            </div>
+                        ) : (
+                            <div className="flex items-center justify-between w-full mb-4">
+                                <button
+                                    onClick={handleContinue}
+                                    disabled={!isButtonEnabled || contadorDeUsos >= 5}
+                                    className={`py-2 px-6 rounded ${isButtonEnabled || contadorDeUsos >= 5
+                                        ? 'bg-orange-600 hover:bg-orange-600 text-white'
+                                        : 'bg-orange-600 text-white-700 cursor-not-allowed'
+                                        }`}
+                                >
+                                    Continúa...
+                                </button>
+                                <button
+                                    onClick={handleImprimir}
+                                    disabled={!isButtonEnabled || contadorDeUsos >= 5}
+                                    className={`py-2 px-6 rounded ${isButtonEnabled || contadorDeUsos >= 5
+                                        ? 'bg-orange-600 hover:bg-orange-600 text-white'
+                                        : 'bg-orange-600 text-white-700 cursor-not-allowed'
+                                        }`}
+                                >
+                                    Descargar
+                                </button>
+                                <button
+                                    onClick={handleReescribir}
+                                    disabled={!isButtonEnabled || contadorDeUsos >= 5}
+                                    className={`py-2 px-6 rounded ${isButtonEnabled || contadorDeUsos >= 5
+                                        ? 'bg-orange-600 hover:bg-orange-600 text-white'
+                                        : 'bg-orange-600 text-white-700 cursor-not-allowed'
+                                        }`}
+                                >
+                                    Reescribir
+                                </button>
+                            </div>
+
+
+                        )}
+
+
+
 
                     </div>
 
