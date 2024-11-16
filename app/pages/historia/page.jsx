@@ -9,7 +9,7 @@ import Burbuja from "@/components/burbuja-dialogo";
 import Header from "@/components/header";
 import Button from "@/components/button/back";
 import Image from "next/image";
-import { sendHistoryToIa, convertirPdf } from "@/services/historia/api";
+import { sendHistoryToIa, convertirPdf ,mejoraHistoria} from "@/services/historia/api";
 import { Merriweather } from 'next/font/google';
 import { DialogoAventura, MaxAyuda, DialogoTerror, DialogoCienciaFiccion, DialogoRomance } from '@/data/dialogs';
 
@@ -116,7 +116,27 @@ export default function Historia() {
     }
   };
   const handleReescribir = async () => {
+    !isButtonEnabled
+    SumarContador();
+    const data = {
+      titulo: cuento.titulo,
+      genero: cuento.genero,
+      contenido: storyText
+    }
+    localStorage.setItem('contenido', storyText);
+    try {
+      const response = await mejoraHistoria(data);
+      if (response && response.data) {
 
+
+
+        setStoryText(response.data);
+        isButtonEnabled
+
+      }
+    } catch (error) {
+      console.log("Error", error);
+    }
 
   };
 
