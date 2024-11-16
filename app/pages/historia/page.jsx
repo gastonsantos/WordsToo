@@ -93,7 +93,7 @@ export default function Historia() {
     localStorage.setItem("contador", newContador.toString());
 
   };
-
+/*Funciones de la api*/
   const handleContinue = async () => {
     SumarContador();
     const data = {
@@ -105,18 +105,13 @@ export default function Historia() {
     try {
       const response = await sendHistoryToIa(data);
       if (response && response.data) {
-
-
         setStoryText(response.data);
-
-
       }
     } catch (error) {
       console.log("Error", error);
     }
   };
   const handleReescribir = async () => {
-    
     SumarContador();
     const data = {
       titulo: cuento.titulo,
@@ -127,19 +122,14 @@ export default function Historia() {
     try {
       const response = await mejoraHistoria(data);
       if (response && response.data) {
-
-
-
         setStoryText(response.data);
-      
-
       }
     } catch (error) {
       console.log("Error", error);
     }
 
   };
-
+///////////////////////////////////////
   const handleImprimir = async () => {
     try {
       await convertirPdf(cuento, storyText);
