@@ -10,7 +10,7 @@ const Button = () => {
     <div>
       <button
         onClick={handleBack}
-        className="py-3 px-6 rounded text-white bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-orange-300 dark:focus:ring-orange-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-orange-800/80 font-medium rounded-lg text-sm text-center me-1 mb-1"
+        className="py-3 px-6 rounded text-white bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-orange-300 dark:focus:ring-orange-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-orange-800/80 font-medium rounded-lg text-sm text-center me-1 mb-2"
       >
         <span className="flex items-center justify-center">
           <svg

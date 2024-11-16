@@ -25,14 +25,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="">
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-r from-orange-600 via-orange-700 to-orange-800 
- `} 
+        flex flex-col min-h-screen`}
       >
-       
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

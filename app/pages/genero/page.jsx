@@ -132,8 +132,6 @@ export default function Titulo() {
           </div>
         </div>
       </div>
-
-
     </div>
   );
 }
