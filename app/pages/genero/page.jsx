@@ -53,7 +53,7 @@ export default function Titulo() {
   const messages = DialogoGenero;
 
   return (
-    <div className='h-screen '>
+    <div className=''>
       <Header />
       <div className="relative flex items-center justify-center  py-12">
         <div className="relative flex flex-col items-center space-y-10 ">

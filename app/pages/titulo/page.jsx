@@ -40,7 +40,7 @@ export default function Titulo() {
   };
 
   return (
-    <div className="h-screen w-screen flex flex-col justify-start">
+    <div className="w-screen flex flex-col justify-start">
       <Header />
       <div className="flex flex-col items-center space-y-10 w-full mt-6">
         <div className="mt-2">
