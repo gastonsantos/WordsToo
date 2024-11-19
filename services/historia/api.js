@@ -4,9 +4,11 @@ import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 
 async function sendHistoryToIa(data){
+  console.log("API URL:", API); // Esto debe mostrar "https://wordstoo-back.onrender.com"
+
     try {
      // const response = await axios.post("https://wordstoo-back.onrender.com/api/cohere/continuarHistoria", data);
-      const response = await axios.post(API+"/api/cohere/continuarHistoria", data);
+      const response = await axios.post(API+'/api/cohere/continuarHistoria', data);
       if (response.data != null) {
         console.log(response);
         localStorage.setItem("contenido",response.data)
@@ -22,7 +24,7 @@ async function sendHistoryToIa(data){
   async function mejoraHistoria(data){
     try {
       //const response = await axios.post("https://wordstoo-back.onrender.com/api/cohere/mejorarHistoria", data);
-      const response = await axios.post(API+"/api/cohere/mejorarHistoria", data);
+      const response = await axios.post(API+'/api/cohere/mejorarHistoria', data);
       
       if (response.data != null) {
         console.log(response);
