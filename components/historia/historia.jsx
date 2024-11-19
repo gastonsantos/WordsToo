@@ -275,7 +275,7 @@ export default function Historia() {
                                 <button
                                     onClick={handleImprimir}
                                     disabled={!isButtonEnabled || contadorDeUsos >= 5}
-                                    className={`py-2 px-6 rounded ${isButtonEnabled || contadorDeUsos >= 5
+                                    className={`py-2 px-6 rounded ${isButtonEnabled || contadorDeUsos >= 6
                                         ? 'bg-orange-600 hover:bg-orange-600 text-white'
                                         : 'bg-orange-600 text-white-700 cursor-not-allowed'
                                         }`}
