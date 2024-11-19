@@ -1,4 +1,4 @@
-import { API, API_BACK } from "@/config/constants";
+import { API_BACK } from "@/config/constants";
 import axios from 'axios';
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
@@ -7,7 +7,7 @@ async function sendHistoryToIa(data){
  
 
     try {
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/cohere/continuarHistoria`, data);
+      const response = await axios.post("https://wordstoo-back.onrender.com/api/cohere/continuarHistoria", data);
      // const response = await axios.post(`${API_BACK}/api/cohere/continuarHistoria`, data);
       if (response.data != null) {
         console.log(response);
@@ -23,7 +23,7 @@ async function sendHistoryToIa(data){
 
   async function mejoraHistoria(data){
     try {
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/cohere/mejorarHistoria`, data);
+      const response = await axios.post("https://wordstoo-back.onrender.com/api/cohere/mejorarHistoria", data);
       //const response = await axios.post(API_BACK+'/api/cohere/mejorarHistoria', data);
       
       if (response.data != null) {
