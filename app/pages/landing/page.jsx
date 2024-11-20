@@ -45,7 +45,7 @@ const landing = () => {
                     <div className="relative flex flex-col text-gray-700 border-gray-700 dark:border-white-700 dark:text-gray-400">
                         <div className=''>
                             <h1 className={`${merriweather.className} ml-2 font-bold text-xl text-white`}>Bienvenidos a WordsToo </h1>
-                            <h5 className={`${merriweather.className} ml-64 font-bold text-xs text-white`}>(La historia continúa...)</h5>
+                            <h5 className={`${merriweather.className} ml-64 font-bold text-xs text-white`}> La historia continúa...</h5>
                             <ul className="mt-8 flex flex-col space-y-2">
                                 <li className="flex"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                     stroke="currentColor" aria-hidden="true" className="mr-2 mb-8 h-auto w-6 text-blue-600 sm:w-7">

@@ -189,7 +189,7 @@ export default function Historia() {
                 <div className="grid grid-cols-12 gap-4 py-12 px-4">
 
 
-                    <div className=" first-step col-span-12 md:col-span-4 flex flex-col items-center space-y-4 ">
+                    <div className="first-step col-span-12 md:col-span-4 flex flex-col items-center space-y-4 ">
                         <div className='mb-2'>
                             <Burbuja messages={messages} />
                         </div>
@@ -222,7 +222,7 @@ export default function Historia() {
                         <div className="flex items-center justify-between mb-4 w-full">
                             {/* Botón de Tour (Izquierda) */}
                             <button
-                                className=" left-0 text-white bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-orange-300 dark:focus:ring-orange-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-orange-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+                                className="left-0 text-white bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-orange-300 dark:focus:ring-orange-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-orange-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
                                 onClick={() => setIsOpen(true)}
                             >
                                 Ayuda
@@ -265,7 +265,7 @@ export default function Historia() {
                                 <button
                                     onClick={handleContinue}
                                     disabled={!isButtonEnabled || contadorDeUsos >= 5}
-                                    className={`py-2 px-6 rounded ${isButtonEnabled || contadorDeUsos >= 5
+                                    className={`third-step py-2 px-6 rounded ${isButtonEnabled || contadorDeUsos >= 5
                                         ? 'bg-orange-600 hover:bg-orange-600 text-white'
                                         : 'bg-orange-600 text-white-700 cursor-not-allowed'
                                         }`}
@@ -275,7 +275,7 @@ export default function Historia() {
                                 <button
                                     onClick={handleImprimir}
                                     disabled={!isButtonEnabled || contadorDeUsos >= 6}
-                                    className={`py-2 px-6 rounded ${isButtonEnabled || contadorDeUsos >= 6
+                                    className={`five-step py-2 px-6 rounded ${isButtonEnabled || contadorDeUsos >= 6
                                         ? 'bg-orange-600 hover:bg-orange-600 text-white'
                                         : 'bg-orange-600 text-white-700 cursor-not-allowed'
                                         }`}
@@ -285,7 +285,7 @@ export default function Historia() {
                                 <button
                                     onClick={handleReescribir}
                                     disabled={!isButtonEnabled || contadorDeUsos >= 5}
-                                    className={`py-2 px-6 rounded ${isButtonEnabled || contadorDeUsos >= 5
+                                    className={`four-step py-2 px-6 rounded ${isButtonEnabled || contadorDeUsos >= 5
                                         ? 'bg-orange-600 hover:bg-orange-600 text-white'
                                         : 'bg-orange-600 text-white-700 cursor-not-allowed'
                                         }`}

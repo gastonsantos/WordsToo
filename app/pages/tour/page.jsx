@@ -1,6 +1,6 @@
 "use client"
 import { TourProvider } from '@reactour/tour'
-import { steps } from './steps.js'
+import { steps } from '@/data/steps'
 import Historia from '@/components/historia/historia.jsx'
 
 export default function App () {
@@ -16,11 +16,11 @@ export default function App () {
           '--reactour-accent': '#000000',
           borderRadius: radius,
           color: '#000000',
-          fontWeight: 'bold', // Hacer la letra en negrita
+          fontWeight: 'bold', 
         }),
         maskWrapper: (base) => ({ 
           ...base, 
-          backgroundColor: 'rgba(0, 0, 0, 0.9)', // Más oscuro con opacidad alta
+          backgroundColor: 'rgba(0, 0, 0, 0.9)',
         }),
         badge: (base) => ({ 
           ...base, 
