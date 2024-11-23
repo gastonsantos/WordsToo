@@ -1,5 +1,4 @@
-import { API_BACK } from "@/config/constants";
-import axios from 'axios';
+
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import axiosInstance from '@/services/interceptor/api';
@@ -8,8 +7,8 @@ async function sendHistoryToIa(data){
  
 
     try {
-     //const response = await axiosInstance.post("https://wordstoo-back.onrender.com/api/cohere/continuarHistoria", data);
-      const response = await axiosInstance.post('http://localhost:8000/api/cohere/continuarHistoria', data);
+     const response = await axiosInstance.post("https://wordstoo-back.onrender.com/api/cohere/continuarHistoria", data);
+     //const response = await axiosInstance.post('http://localhost:8000/api/cohere/continuarHistoria', data);
       if (response.data != null) {
         console.log(response);
         localStorage.setItem("contenido",response.data)
