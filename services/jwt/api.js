@@ -7,7 +7,7 @@ import { API_BACK } from "@/config/constants";
 const getjwt = async () => {
     try {
         const response = await axios.get("https://wordstoo-back.onrender.com/api/cohere/generar-token", {
-        //const response = await axios.get("http://localhost:8000/api/cohere/generar-token", {
+        
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
