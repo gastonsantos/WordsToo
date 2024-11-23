@@ -6,7 +6,7 @@ import { API } from "@/config/constants";
 const axiosInstance = axios.create({
    //baseURL: "https://wordstoo-back.onrender.com",
    baseURL:"http://localhost:8000",
-  //baseURL: API,
+  
   headers: {
     'Content-Type': 'application/json',
   },
