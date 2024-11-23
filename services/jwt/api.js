@@ -5,16 +5,18 @@ import { API_BACK } from "@/config/constants";
 
 
 const getjwt = async () => {
+    console.log("Entra al getjwt");
     try {
-        const response = await axios.get("https://wordstoo-back.onrender.com/api/cohere/generar-token", {
-        
+            //const response = await axios.get("https://wordstoo-back.onrender.com/api/cohere/generar-token", {
+            const response = await axios.get("http://localhost:8000/api/cohere/generar-token", {
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
             }
         });
         if (response.data != null) {
-
+            console.log("No es null",response.data );
+            
             // Obtener el token del usuario de los datos
             const token = response.data;
             console.log(response.data);
