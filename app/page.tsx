@@ -1,6 +1,5 @@
 "use client";
 import { useRouter } from 'next/navigation'; // Importar el hook de navegación
-import Link from 'next/link';
 import Dog from "@/components/perro/dog";
 import Burbuja from "@/components/burbuja-dialogo";
 import Header from "@/components/header";
