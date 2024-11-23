@@ -8,6 +8,7 @@ import { Merriweather } from 'next/font/google';
 import { empezarHistoria } from "@/services/historia/api";
 import {DialogoInicio} from '@/data/dialogs';
 import '@/styles/dog-style.css';
+import {getjwt} from '@/services/jwt/api';
 
 const merriweather = Merriweather({
     subsets: ['latin'],
@@ -19,7 +20,9 @@ const landing = () => {
         DialogoInicio
     ];
     const handleEmpezar = async () => {
-     await empezarHistoria();
+        await empezarHistoria();
+        await getjwt();
+       
       };
       
     return (

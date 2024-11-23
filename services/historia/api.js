@@ -2,13 +2,14 @@ import { API_BACK } from "@/config/constants";
 import axios from 'axios';
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
+import axiosInstance from '@/services/interceptor/api';
 
 async function sendHistoryToIa(data){
  
 
     try {
-      const response = await axios.post("https://wordstoo-back.onrender.com/api/cohere/continuarHistoria", data);
-     // const response = await axios.post(`${API_BACK}/api/cohere/continuarHistoria`, data);
+      const response = await axiosInstance.post("https://wordstoo-back.onrender.com/api/cohere/continuarHistoria", data);
+      //const response = await axiosInstance.post('http://localhost:8000/api/cohere/continuarHistoria', data);
       if (response.data != null) {
         console.log(response);
         localStorage.setItem("contenido",response.data)
@@ -23,8 +24,8 @@ async function sendHistoryToIa(data){
 
   async function mejoraHistoria(data){
     try {
-      const response = await axios.post("https://wordstoo-back.onrender.com/api/cohere/mejorarHistoria", data);
-      //const response = await axios.post(API_BACK+'/api/cohere/mejorarHistoria', data);
+      const response = await axiosInstance.post("https://wordstoo-back.onrender.com/api/cohere/mejorarHistoria", data);
+      //const response = await axiosInstance.post('http://localhost:8000/api/cohere/mejorarHistoria', data);
       
       if (response.data != null) {
         console.log(response);
@@ -40,6 +41,7 @@ async function sendHistoryToIa(data){
     localStorage.removeItem("contenido");
     localStorage.removeItem("genero");
     localStorage.removeItem("titulo");
+    localStorage.removeItem("token");
   }
 
   async function convertirPdf(cuento, storyText){

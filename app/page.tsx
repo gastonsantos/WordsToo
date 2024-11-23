@@ -8,6 +8,7 @@ import { empezarHistoria } from "@/services/historia/api";
 import '@/styles/dog-style.css';
 import { DialogLanding } from '@/data/dialogs';
 import {pasos} from '@/data/pasos';
+import {getjwt} from '@/services/jwt/api';
 const merriweather = Merriweather({
     subsets: ['latin'],
     weight: ['400', '700'], // Define los pesos que quieras usar
@@ -16,7 +17,10 @@ const merriweather = Merriweather({
 const landing = () => {
 
     const handleEmpezar = async () => {
+        
         await empezarHistoria();
+        await getjwt();
+        
     };
   
     return (
