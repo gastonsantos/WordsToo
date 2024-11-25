@@ -11,7 +11,6 @@ const getjwt = async () => {
             //const response = await axios.get("http://localhost:8000/api/jwt/generar-token", {
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
             }
         });
         if (response.data != null) {
