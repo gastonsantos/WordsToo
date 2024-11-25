@@ -8,7 +8,7 @@ import { empezarHistoria } from "@/services/historia/api";
 import '@/styles/dog-style.css';
 import { DialogLanding } from '@/data/dialogs';
 import { pasos } from '@/data/pasos';
-import { getjwt } from '@/services/jwt/api';
+//import { getjwt } from '@/services/jwt/api';
 
 const merriweather = Merriweather({
     subsets: ['latin'],
@@ -22,7 +22,7 @@ const Landing = () => {
         try {
             // Realizar las operaciones asincrónicas necesarias
             await empezarHistoria();
-            await getjwt();
+           // await getjwt();
 
             // Navegar a la página "titulo" después de completarlas
             router.push('/pages/titulo');
