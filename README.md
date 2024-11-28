@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌟 **WordsToo**  
+**Blue tu compañero creativo para la creación de tu historia.**  
 
-## Getting Started
+**WordsToo** es una aplicación web diseñada para quienes aman escribir historias y desean explorar su creatividad junto a **Blue**, una inteligencia artificial impulsada por la API de Cohere. Ya sea que necesites inspiración o simplemente mejorar la redacción de tu obra.
 
-First, run the development server:
+## 🚀 **Características principales**  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 🖋️ **Crea tu historia junto a Blue:**  
+  Cuando las ideas falten, Blue estará listo para continuar la historia manteniendo el estilo y la esencia de tu historia.  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- ✍️ **Reescribe y perfecciona:**  
+  Si tienes una buena idea pero no te convence la redacción, Blue puede reescribir tu texto, asegurando que mantenga su esencia.  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 📄 **Descarga en PDF:**  
+  Exporta tu historia en cualquier momento en formato PDF.
+  
+## ⚙️ **Tecnologías utilizadas**  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **Backend**  
+- Java 17  
+- Spring Boot  
 
-## Learn More
+### **Frontend**  
+- Next.js  
 
-To learn more about Next.js, take a look at the following resources:
+### **Infraestructura**  
+- Docker  
+- Render para despliegue  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### **Inteligencia Artificial**  
+- API de Cohere para la generación y reescritura de textos  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🌐 **Despliegue**  
+- [Aplicación en vivo](https://words-too-eq93.vercel.app)  
 
-## Deploy on Vercel
+## 🛠️ **Repositorios**  
+- [Frontend - WordsToo](https://github.com/gastonsantos/WordsToo)  
+- [Backend - WordsToo](https://github.com/gastonsantos/WordsToo.Back)  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
