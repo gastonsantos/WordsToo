@@ -1,4 +1,5 @@
-![WordsToo](public/images/icons/Blue-No fondo.png)
+![WordsToo](/images/icons/Blue-No fondo.png)
+
 **WordsToo**  
 **Blue tu compañero creativo para la creación de tu historia.**  
 
