@@ -1,4 +1,5 @@
-![WordsToo](/images/icons/logoPdf.png)
+![WordsToo](public/images/icons/logoPdf.png)
+
 
 **WordsToo**  
 **Blue tu compañero creativo para la creación de tu historia.**  
