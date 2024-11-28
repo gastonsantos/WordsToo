@@ -1,4 +1,5 @@
-# 🌟 **WordsToo**  
+![WordsToo](public/images/icons/Blue-No fondo.png)
+**WordsToo**  
 **Blue tu compañero creativo para la creación de tu historia.**  
 
 **WordsToo** es una aplicación web diseñada para quienes aman escribir historias y desean explorar su creatividad junto a **Blue**, una inteligencia artificial impulsada por la API de Cohere. Ya sea que necesites inspiración o simplemente mejorar la redacción de tu obra.
