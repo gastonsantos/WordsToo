@@ -88,15 +88,7 @@ const Landing = () => {
                   <span className={`${merriweather.className} ml-2`}>Comenzar</span>
                   <span>✏️</span>
                 </button>
-                {showInstallButton && (
-                  <button
-                    onClick={handleInstall}
-                    className="w-32 px-4 py-2 bg-green-400 rounded-lg text-md font-medium text-white tracking-wide flex items-center justify-center"
-                  >
-                    <span className={`${merriweather.className} ml-2`}>Descargar</span>
-                    <span>📥</span>
-                  </button>
-                )}
+           
               </div>
             </div>
           </div>
@@ -124,6 +116,15 @@ const Landing = () => {
                 </li>
               ))}
             </ul>
+            {showInstallButton && (
+                  <button
+                    onClick={handleInstall}
+                    className="w-32 px-4 py-2 bg-green-400 rounded-lg text-md font-medium text-white tracking-wide flex items-center justify-center"
+                  >
+                    <span className={`${merriweather.className} ml-2`}>Descargar</span>
+                    <span>📥</span>
+                  </button>
+                )}
           </div>
         </div>
       </section>

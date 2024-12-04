@@ -3,5 +3,6 @@ export const pasos = [
     { text: "Selecciona tu género favorito" },
     { text: "Empezala a escribir..." },
     { text: "Blue nuestra IA, te acompañara en el proceso" },
-    { text: "Comparte o imprime cuando la termine" },
+    { text: "Imprime cuando la termine" },
+    { text: "Descarga la App" },
   ];
