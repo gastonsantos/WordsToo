@@ -31,7 +31,7 @@ const merriweather = Merriweather({
 const Landing = () => {
   const router = useRouter();
   const [installPrompt, setInstallPrompt] = useState<BeforeInstallPromptEvent | null>(null);
-  const [showInstallButton, setShowInstallButton] = useState(false);
+  const [showInstallButton, setShowInstallButton] = useState(true);
 
   useEffect(() => {
     const handleBeforeInstallPrompt = (event: BeforeInstallPromptEvent) => {
@@ -90,6 +90,17 @@ const Landing = () => {
                 </button>
            
               </div>
+              <div className="block sm:hidden">
+              {showInstallButton && (
+                  <button
+                    onClick={handleInstall}
+                    className="w-32 px-4 py-2 bg-green-400 rounded-lg text-md font-medium text-white tracking-wide flex items-center justify-center"
+                  >
+                    <span className={`${merriweather.className} ml-2`}>Descargar</span>
+                    <span>📥</span>
+                  </button>
+                )}
+                </div>
             </div>
           </div>
           <div className="flex flex-col flex-wrap mt-8 hidden md:block">
