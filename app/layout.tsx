@@ -17,7 +17,13 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "WordsToo",
   description: "Escribamos una historia juntos...",
+  manifest: "/manifest.json",
+  icons: {
+    apple: "/icon512_rounded.png",
+  },
+  themeColor: "#ee7320",
 };
+
 
 export default function RootLayout({
   children,
