@@ -17,6 +17,9 @@
 - 📄 **Descarga en PDF:**  
   Exporta tu historia en cualquier momento en formato PDF.
   
+  - 📄 **Descarga la aplicación PWA:**  
+  Se puede ejecutar en múltiples dispositivos y plataformas.
+  
 ## ⚙️ **Tecnologías utilizadas**  
 
 ### **Backend**  
